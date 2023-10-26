@@ -1,8 +1,9 @@
-package oct25th;
+package oct26th;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Iterator;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -10,7 +11,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelRead {
+public class ExcelRead2 {
 
 	public static void main(String[] args) throws IOException {
 		
@@ -20,24 +21,23 @@ public class ExcelRead {
 		
 		XSSFSheet ws=wb.getSheet("Sheet3");
 		
-		System.out.println( ws.getLastRowNum());
-		
-		System.out.println(ws.getPhysicalNumberOfRows());
-		
-		System.out.println(ws.getRow(0).getLastCellNum());
-		
-		System.out.println(ws.getRow(0).getPhysicalNumberOfCells());
+		Iterator<Row> rows=ws.rowIterator();
 		
 		Row row=null;
+		
 		Cell cell=null;
 		
-		for(int i=0;i<=ws.getLastRowNum();i++)
+		while(rows.hasNext())
 		{
-			row=ws.getRow(i);
 			
-			for(int j=0;j<row.getLastCellNum();j++)
+			row=rows.next();
+			
+			Iterator<Cell>  cells=row.cellIterator();
+			
+			while(cells.hasNext())
 			{
-				cell=row.getCell(j);
+				
+				cell=cells.next();
 				
 				if(cell.getCellType()==CellType.STRING)
 				{
@@ -52,6 +52,8 @@ public class ExcelRead {
 					System.out.println(cell.getBooleanCellValue()+" is a boolean");
 				}
 			}
+		
+		
 		}
 		
 		
