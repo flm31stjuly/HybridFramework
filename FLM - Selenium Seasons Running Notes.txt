@@ -1,0 +1,1260 @@
+******************************************
+Automation - Selenium Season - 1
+Day 15   - 25th  September  - Monday 
+******************************************
+
+Selenium 
+
+it's an API (jar) 
+
+Java is also an API ( jars)
+
+Selenium WebDriver : 
+
+https://www.selenium.dev/
+
+Selenium automates browsers. That's it!
+
+
+Selenium automates Web Applications or websites . 
+
+Click on "Download"
+
+under 
+Previous Releases . click on hyperlink "releases" 
+
+
+Now latest version : 4.12.0 
+
+Popular or long time stable version : 
+
+selenium-server-standalone-3.141.59.jar  
+
+or 
+
+selenium-server-4.7.2.jar
+
+
+how to add any jar to eclipse Java project ?
+
+right click on project -> go to build path -> configure build path --> click on Libraries tab --> 
+click on classpath --> click on Add exteernal jars button -> choose the jar from the location where you have downloaded 
+-> Click open -> apply -->apply and close 
+
+Now you see the jars under 
+Referenced Libraries in the project 
+
+-------------------------------
+
+org.openqa.selenium
+
+SearchContext(I)
+WebDriver(I)
+RemoteWebDriver(C)
+ChromiumDriver(C)
+ChromeDriver(C)
+
+
+IllegalStateException
+
+Exception in thread "main" java.lang.IllegalStateException:
+ The path to the driver executable must be set by the webdriver.chrome.driver system property;
+ for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. 
+ The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
+ 
+
+chrome browser Version : Version 117.0
+
+
+
+using WebDriver Manager :
+
+jar 
+
+https://github.com/bonigarcia/webdrivermanager
+
+webdrivermanager-5.5.3 jar 
+
+
+????????????????????????????????
+Assignment :
+
+Launch Firefox browser  and Edge browser 
+using all different ways 
+
+?????????????????????????????????
+
+
+******************************************
+Automation - Selenium Season - 1
+Day 15   - 25th  September  - Monday 
+******************************************
+
+
+1. what are the arguments/parameters that method required 
+2. what is the return-type 
+3. over all what does the method do 
+
+
+============================
+Methods In WebDriver (13)
+============================
+
+org.openqa.selenium.WebDriver.ImeHandler
+org.openqa.selenium.WebDriver.Navigation
+org.openqa.selenium.WebDriver.Options
+org.openqa.selenium.WebDriver.TargetLocator
+org.openqa.selenium.WebDriver.Timeouts
+org.openqa.selenium.WebDriver.Window
+
+
+
+-----------------------------
+get(String):void 
+
+here String is the url of the web app 
+
+this method will launch the app 
+
+--------------------------------
+close():void  this method will close the tab or window on which webdriver focus is 
+
+close methodd will close only one tab 
+
+
+------------------------------------
+
+quit():void this method will close all tabs or windows opened during that session 
+
+Interview :  diff b/w close and quit 
+
+Close : will close one tab or window on which webdriver focus is 
+ -> this will not kill chromedriver.exe task running in the backend
+
+quit : will close all tabs/windows opened during that session 
+-> this will  kill chromedriver.exe task running in the backend
+
+-------------------------------------
+getTitle():String this will return the title of page in String format
+
+------------------------------------
+getCurrentUrl():String this will return the url of page in String format
+
+----------------------------------------
+getPageSource():String this will return the html code of the page 
+--------------------------------------------
+getWindowHandle():String this will return the window id of the tab or window on which webdriver focus 
+
+0-9 A-F 
+
+CEF9710A8094440DCF57F1AE4F081C56
+
+--------------------------------------------------
+getWindowHandles():Set<String>  this will return the window ids of all tab's or windows 
+opened during the session in a collection form
+--------------------------------------------------
+
+manage(): Options 
+
+this will help in managing the window sizes , cookies , synchronization etc..
+
+
+******************************************
+Automation - Selenium Season - 1
+Day    - 27th  September  - Wednesday 
+******************************************
+
+============================
+Methods In WebDriver (13) .Cont...
+============================
+
+-----------------------------------------
+navigate(): Navigation
+
+back()
+forward()
+refresh()
+to(String)
+to(URL)
+------------------------------------------
+switchTo(): TargetLocator  
+
+this method is used to switch the webdriver control from page to tab/window or alert or frame 
+
+activeElement()
+alert()
+defaultContent()
+frame(int)
+frame(String)
+frame(WebElement)
+parentFrame()
+window(String)
+
+-------------------------------------------
+findElement(By):WebElement
+
+
+className(String)
+cssSelector(String)
+id(String)
+linkText(String)
+name(String)
+partialLinkText(String)
+tagName(String)
+xpath(String)
+
+-----------------------------------------------------
+Locators in Selenium (8) or Locator startagies
+-----------------------------------------------------
+
+HTML Terminology 
+
+<input type="text" name="username" id="username" class="login_input" value="" fdprocessedid="0b90x8">
+
+<a href="Register.php">New User Register Here</a>
+
+<tagname attribute1="value of attribute1" attribute2="value of attribute2" .....></tagName>
+
+<tagname attribute1="value of attribute1" attribute2="value of attribute2" .....>text on element</tagName>
+
+Locators based on attributes : 
+
+id(String)
+name(String)
+className(String)
+
+based on link text : 
+
+linkText(String): text present in between > and <
+
+partialLinkText(String): subset of text present in between > and <
+
+
+based  on tagName :
+
+tagName(String) => this is not prefred for single element 
+mostly prefred for multiple elements 
+
+
+based on tagName and /or  attributes and /or text on element :
+
+xpath(String)
+
+cssSelector(String) 
+
+----------------------------------------------------------
+
+findElements(By) : List<WebElement>
+
+===================================
+Methods in WebElement (16) :
+===================================
+
+
+-----------------------------------------------
+sendKeys(CharSequence...): void 
+-------------------------------------------
+click():void 
+---------------------------------------
+
+
+******************************************
+Automation - Selenium Season - 1
+Day    - 28th  September  - Thursday 
+******************************************
+
+------------------------------------
+Methods in WebElement(16)  cont ..
+-------------------------------------
+clear(): void 
+this is applied to text fields (having tagname input and type=text )
+---------------------------------------
+getText():String
+---------------------------------------------
+getAttribute(String):String 
+
+case 1: attribute is present with some value  o/p: value 
+
+case 2: attribute is not present  o/p: null
+
+case 3: attribute is present but value not assigned o/p :true 
+
+----------------------------------------------------------------
+getCssValue(String):String
+
+CSS : Cascading style sheets 
+
+----------------------------------------------------------------
+
+getLocation():Point ( x,y coordinatees of left most corner of WebElement)
+getRect(): x,y,height and width
+getSize(): height and width
+
+--------------------------------------------------------------------------
+
+getTagName():String 
+--------------------------------------------------------------------
+
+isDisplayed():boolean 
+isEnabled():boolean
+isSelected():boolean  ==> this will be discussed in dropdown , checkbox , radio button 
+
+----------------------------------------------------------------------
+
+submit():void this is to submit a form directly to server
+
+--------------------------------------------------------------------
+
+findElement(By):WebElement
+findElements(By):List<WebElement> 
+
+
+******************************************
+Automation - Selenium Season - 1
+Day    - 29th  September  - Friday 
+******************************************
+
+findElement(By):WebElement
+findElements(By):List<WebElement>
+
+------------------------------------------
+Links Testing 
+
+id
+name
+className
+tagname
+linkText
+partialLinkText
+xpath
+cssSelector
+
+<a href="Register.php">New User Register Here</a>
+
+
+Links HTML terminology :
+
+html tag : a 
+
+---------------------------------------------
+
+Dropdown Testing 
+
+
+to select an item from dropdown we have 2 ways 
+
+1) Conventional way 
+2) using Select class 
+
+-------------
+1) Conventional way 
+
+using sendkeys 
+
+2) using Select class 
+
+org.openqa.selenium.support.ui
+
+Select 
+
+constructor : 
+
+Select(WebElement)
+
+selectByIndex(int) ; index starts from 0  // not prefered 
+selectByValue(String) ; here String is value of "value" attribute
+selectByVisibleText(String): here is text on the item or option (text between > and <)
+
+
+_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy
+
+_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy
+
+_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy
+_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy
+
+
+????????????????????????????????
+Assignment 
+
+go to facebook.com 
+
+click on "Create Account"
+
+select your birthday
+??????????????????????????????????????????
+
+_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy
+
+******************************************
+Automation - Selenium Season - 1
+Day    - 30th  September  - Saturday 
+******************************************
+
+Xpath : 
+
+xml path is a query language to find xml nodes .
+
+
+HTML is an implementation for XML , so we can use xpath for finding or focusing HTML nodes (WebElement) 
+
+												Xpath
+												
+												
+						1)Absolute						2)Relative
+
+
+1) Absolute Xpath :
+
+if you start writing the xpath from root node (html ) 						
+												
+route or path from root (html) 
+
+/html/body/table[2]/tbody/tr/td[2]/form/table/tbody/tr[2]/td[2]/input											
+												
+/html/body/table[2]/tbody/tr/td[2]/form/table/tbody/tr[2]/td[2]/input	
+/html/body/table[2]/tbody/tr/td[2]/form/table/tbody/tr[3]/td[2]/input											
+												
+
+2)Relative	xpath : 
+
+it can be a subset or path from some other node (not from html) 
+
+
+can be written using tagname and/or attributes and/or text 
+
+
+HTML Terminology 
+
+<input type="text" name="username" id="username" class="login_input" value="" fdprocessedid="0b90x8">
+
+<a href="Register.php">New User Register Here</a>
+
+<tagname attribute1="value of attribute1" attribute2="value of attribute2" .....></tagName>
+
+<tagname attribute1="value of attribute1" attribute2="value of attribute2" .....>text on element</tagName>
+
+i) xpath based on tagname and attribute/s 
+
+//tagname[@attribute='value of attribute']
+
+<input type="text" name="username" id="username" class="login_input" value="" fdprocessedid="zcgfru">
+
+//input[@id='username']
+
+//input[@class='login_input' and @type='password']
+
+ii) xpath based on tagname and text
+
+//tagname[text()='text on element']
+
+//td[text()='Important Note:']
+
+iii) xpath using contains for attributes 
+
+
+//tagname[contains(@attribute,'subset of attribute value')]
+
+//a[contains(@class,'_42ft _4jy0 _6lti _4jy6 _4jy2')]
+
+//img[contains(@src,'images/home.gif')]
+
+
+iv) xpath using contains for text 
+
+//tagname[contains(text(),'subset of text on webelement')] 
+
+//a[contains(text(),'Create new account')]
+
+
+v) xpath using starts-with 
+
+//tagname[starts-with(@attribute,'starting value ')]
+
+//a[starts-with(@class,'_42ft _4jy0') and @rel='async']
+
+
+
+findElements(By):List<WebElement>
+
+											
+******************************************
+Automation - Selenium Season - 2
+Day    - 9th October  - Monday 
+******************************************												
+		
+
+????????????????????????????
+Assignment  to be submitted to below email id 
+
+flmtechteam.testing@frontlinesedutech.com
+
+In https://www.pepperfry.com/
+
+
+Print no of Links under "Partner With Us" module 
+
+and also the the text each link
+
+??????????????????????????????????????
+												
+											
+******************************************
+Automation - Selenium Season - 2
+Day    - 10th October  - Tuesday 
+******************************************												
+														
+	Links Testing (cont ...)											
+												
+Exception in thread "main" org.openqa.selenium.StaleElementReferenceException:
+ stale element reference: stale element not found												
+												
+Reason for StaleElementReferenceException:
+
+since there is change in DOM -Document object model ( this will describe the structure of nodes in HTML)
+the reference become old
+
+Solution: 		
+
+get the new reference (means create the block and the element in the block one more time)										
+												
+												
+===========================
+Unit Testing Frameworks
+============================	
+
+Java :  
+- junit
+- TestNG
+
+Python:
+
+-unittest
+-pytest
+
+
+.net
+
+- NUnit 
+
+TesttNG :
+
+junit + NUnit 
+
+
+how to install TestNG plugin?
+
+- In Eclipse 
+
+go to "help" --> "Eclipse Market place"
+
+enter testng in "find" text fields
+
+click on "go" button
+
+
+you will see "TestNG for Eclipse" plugin 
+
+											
+******************************************
+Automation - Selenium Season - 2
+Day    - 11th October  - Wednesday 
+******************************************		
+											
+	TestNG : NG next generation 
+
+Annotation in TestNG :
+
+
+@Test  --> Test Case or Test Script 
+
+@BeforeMethod 
+
+@AfterMethod 
+
+paramters : 
+
+
+priority 
+
+dependsOnMethods
+
+
+----------------------------------
+Miscelleneous Actions
+
+- Mouse Hovering 
+
+Actions(C)   org.openqa.selenium.interactions
+
+Actions(WebDriver)
+
+
+moveToElement(WebElement)
+moveToElement(WebElement, int, int)
+
+
+//span[text()='Loans']
+	
+	
+	build()
+	
+******************************************
+Automation - Selenium Season - 2
+Day    - 11th October  - Wednesday 
+******************************************		
+
+Miscelleneous Actions(Cont ..)
+
+Drag And Drop :
+
+dragAndDrop(WebElement, WebElement) : first one is source , second is target 
+
+
+dragAndDropBy(WebElement, int, int)
+
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='draggable']"}
+  
+
+NoSuchElementException:
+
+Reason 1 : Locator may be wrong 
+
+Solution 1: correct the locator 
+
+Reason 2 : Element might be loaded lately or synchronization problem 
+
+Solution 2:  overcome synchronization by waits concepts (implicit wait , thread.sleep etc ..) 
+
+Reason 3: Element might be present in a frame 
+
+Solution 3: switch the driver focus to corresponding frame 
+
+???????????????????????????????????????????
+
+https://emicalculator.net/
+
+
+drag "Home Loan Amount" to 75 lakhs
+
+drag "Interest Rate" to 12.5%
+
+drag "Loan Tenure to 15 years 
+
+
+??????????????????????????????????????????
+
+to RightClic on webelement
+
+contextClick():
+contextClick(WebElement)
+
+to double click : 
+
+doubleClick():
+doubleClick(WebElement)
+
+
+Click and Hold :
+clickAndHold(WebElement)
+
+
+================================================
+Multiple Window Handling 
+================================================
+
+getWindowHandle or getWindowHandles
+
+
+switchTo():TargetLocator 
+
+window(String) : here String is the Window ID 
+
+org.openqa.selenium.ElementClickInterceptedException: 
+
+element click intercepted: Element is not clickable at point (692, 7417)
+
+
+Online Furniture Shopping Store: Shop Online in India for Furniture, Home Decor, Homeware Products @ Pepperfry
+
+Online Furniture Shopping Store: Shop Online in India for Furniture, Home Decor, Homeware Products @ Pepperfry
+
+
+
+******************************************
+Automation - Selenium Season - 2
+Day    - 16th October  - Monday 
+******************************************	
+
+
+//div[@id='loanamountslider']/span[@tabindex='0']
+
+//div[@id='loaninterestslider']/span[@tabindex='0']
+
+//div[@id='loantermslider']/span[@tabindex='0']
+
+
+
+Xpath using index :
+
+(//a[contains(text(),'Start free trial')])[1]
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: 
+{"method":"xpath","selector":"//input[@id='UserFirstName-EFUP']"}
+
+(//a[contains(text(),'Start free trial')]/parent::pbc-button/following-sibling::pbc-button/a[contains(text(),'Watch demo')])[1]
+
+
+
+--------------------------------
+Frames Handling 
+--------------------------------
+
+frame 		or 		iframe 
+
+<=HTML4				HTML5
+
+
+driver.switchTo():TargetLocator
+
+
+frame(int): here int is index of iframe or frame from top starting from 0
+frame(String): here String is name or id attribute value 
+
+org.openqa.selenium.NoSuchFrameException: No frame element found by name or id demo-frame
+
+frame(WebElement): 
+
+defaultContent()
+
+parentFrame()
+
+//div[contains(text(),'Find New Cars')]
+
+//div[contains(text(),'Popular Brands')]
+
+
+
+******************************************
+Automation - Selenium Season - 2
+Day    - 17th October  - Tuesday 
+******************************************	
+
+
+Alert 
+
+driver.switchTo():TargetLocator
+
+
+Alert al=driver.switchTo().alert();
+
+accept():void ==> this will click "ok" button on alert
+dismiss():void ==> this will click "cancel" button on alert
+getText():String ==> to retrieve the text present on alert 
+sendKeys(String):void ==> this will be used in prompt alert (to type some text in alert's text box)
+
+
+3 types :
+
+- Simple
+- Confirmation 
+- Prompt
+
+
+
+Please enter a valid user name
+
+?????????????????????????????????
+Assignment
+
+https://demo.guru99.com/v4/
+
+User ID :	mngr266311
+Password :	Admin123$
+
+
+after login 
+
+click on "Delete Customer"
+
+Enter some "Customer ID" 13245
+
+click on "Submit" button
+
+
+validate an alert having text "Do you really want to delete this Customer?" 
+
+the click on "Ok" 
+
+switch on one more alert
+
+validate text on alert to be "Customer does not exist!!"
+
+the click on "Ok" 
+
+??????????????????????????????????????????????????
+
+??????????????????????????????????????????????????
+
+Assignment :
+
+1. Navigate to URL : "http://demo.guru99.com/test/guru99home/"
+2. Click on the "JMeter Made easy" image.
+3. Switch to the newly appeared window.
+4. Scroll to the bottom of the screen.
+5. Verify/print the top tutorials values present on the screen.
+
+??????????????????????????????????????????????????????????
+
+==============================
+how to take Screenshot
+==============================
+
+TakesScreenshot(I)
+
+getScreenshotAs(OutputType<X>):X
+
+
+OutputType(I)
+
+BASE64 : OutputType<String>
+BYTES : OutputType<byte[]>
+FILE : OutputType<File>
+
+
+
+  File srcFile= ((RemoteWebDriver) driver).getScreenshotAs(OutputType.FILE);
+	     
+	     FileUtils.copyFile(srcFile, new File("Adactin1.png"));
+	     
+		 
+		 https://jenkov.com/tutorials/java-internationalization/simpledateformat.html
+		 
+		 
+==============================================
+JavaScriptExecutor 
+
+
+JavascriptExecutor(I)
+
+executeAsyncScript(String, Object...)
+executeScript(String, Object...) 
+
+here String is nothing but JavaScript statement 
+
+Object... this s vargs 
+
+******************************************
+Automation - Selenium Season - 2
+Day    - 18th October  - Wednesday 
+******************************************			 
+		 
+		 
+Scroll the document 100px horizontally:
+
+window.scrollBy(100, 0);
+
+Scroll the document 100px vertically:
+
+window.scrollBy(0, 100);
+
+document.body.scrollHeight
+
+window.scrollBy(0, document.body.scrollHeight);
+
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (692, 7477)
+
+org.openqa.selenium.JavascriptException: javascript error: arguments[0].click is not a function
+														   
+														   
+=======================================================
+Waits in Selenium or Synchronization point or Timeouts 
+=======================================================		
+
+
+0) Hard Wait
+
+using Thread.sleep  ==> not encouraged 
+
+
+1)Implicit Wait
+
+
+driver.findElement ==> this will check the presence of element 
+
+if element is not present within 500 milli seconds then it will give NoSuchElementException
+
+	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
+	
+
+2)Explicit Wait
+
+WebDriverWait(C):
+
+WebDriverWait(WebDriver, long)
+
+Wait(I):
+
+until(Function) : which is static method of ExpectedConditions
+
+ExpectedConditions(C):
+
+
+
+******************************************
+Automation - Selenium Season - 2
+Day    - 19th October  - Thursday 
+******************************************	
+
+3)Fluent Wait 
+					
+
+It's an improved form of Explicit Wait 
+
+
+the main improvements can be done for Explicit are 
+
+1) the max wait is always SECONDS , which can be improved to have milli ,HOURS etc...
+2) polling time ( frequency) always 500 milli seconds 
+3) no inbuilt Exception Handling 
+
+FluentWait(C)
+
+FluentWait(T)
+
+
+???????????????????????????????????????????????
+
+in https://echoecho.com/htmlforms10.htm
+
+validate radio buttons where wine is selected 
+
+
+ Water
+ Beer
+ Wine					
+			
+???????????????????????????????????????????????????
+
+===================
+WebTable 
+
+
+<table
+  <th 
+  <tbody 
+     <tr 
+	   <td 
+	   <td
+	 <tr
+	   <td 
+	   <td
+
+
+							WebTables
+							
+							
+		Static								Dynamic 
+
+
+https://www.timeanddate.com/worldclock/
+
+
+
+//table/tbody/tr[1]/td[1]   //table/tbody/tr[1]/td[2]  ....   //table/tbody/tr[1]/td[8]
+//table/tbody/tr[2]/td[1]
+:
+:
+
+//table/tbody/tr[36]/td[1] 
+
+		
+String part1="//table/tbody/tr[";
+String part2="]/td[";
+String part3="]";
+
+
+ https://www.hdfcbank.com/personal/resources/rates
+ 
+  
+  //td[text()='6 months 1 days  < = 9 months']/following-sibling::td[2]
+			
+  
+  
+**************************************************
+***** JAVA Season - 3 ****************************
+**************************************************
+
+Maven - Project Management build tool
+
+Downloading Apache Maven 3.9.5
+
+Configure Maven :
+
+In Environment Variables 
+
+MAVEN_HOME D:\FLM31stJuly\softwares\apache-maven-3.9.5-bin\apache-maven-3.9.5
+
+M2_HOME D:\FLM31stJuly\softwares\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin
+
+path D:\FLM31stJuly\softwares\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin
+
+ 
+To check Maven configured or not :
+
+go to cmd
+
+mvn -version
+
+C:\Users\Riyaz>mvn -version
+Apache Maven 3.9.5 (57804ffe001d7215b5e7bcb531cf83df38f93546)
+Maven home: D:\FLM31stJuly\softwares\apache-maven-3.9.5-bin\apache-maven-3.9.5
+Java version: 11.0.20, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-11
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+
+
+
+pom.xml here POM means Project Object Model 
+
+
+src/main/java   ==> developers (app code in java)
+src/main/resources  ==> developers (non-java files used for project)
+src/test/java  ==> developers (unit test cases in java using JUNIT )   or Testers for Test Scripts (Java Selenium ) 
+src/test/resources  ==>  developers (non-java files used for unit testing) or Testers (non-java files used for System testing )
+
+
+----------------------------
+File :
+
+java.io 
+
+to create file 
+-> create file object using below constructor
+
+File(String) : here string is the path including the filename and extension
+
+createNewFile():boolean 
+
+
+Folder :
+
+java.io
+
+
+to create folder 
+-> create file object using below constructor
+
+File(String) : here string is the path where folder to be created 
+
+mkdir():boolean
+
+------------------------------------
+How to Read and Write Excel
+
+-------------------------------------
+
+using Apache POI jars or Libs 
+
+org.apache.poi » poi
+
+org.apache.poi » poi-ooxml
+
+org.apache.poi » poi-scratchpad
+
+
+											Excel
+							
+							
+							
+							
+							.xls								.xlsx	
+
+
+
+Workbook                 HSSFWorkbook 					    XSSFWorkbook					
+
+Sheet					 HSSFSheet							XSSFSheet
+
+Row						 HSSFRow                            XSSFRow
+
+Cell					 HSSFCell							XSSFCell
+
+
+
+----------------------------------------
+To read any file in Java 
+
+we need to create object of FileInputStream
+
+FileInputStream(String) : here String is the path of the file including extension
+
+
+XSSFWorkbook(C) :
+
+new XSSFWorkbook(InputStream) ==> here InputStream nothing but object of FileInputStream
+
+getSheet(String) : XSSFSheet
+getSheetAt(int):XSSFSheet
+
+
+**************************************************
+***** JAVA Season - 3 ****************************
+===   26th Oct Thursday ==========================
+**************************************************
+
+Methods :
+
+
+ws.getLastRowNum(): int ==> this will return the last index of row (here row index starts from 0)
+
+ws.getPhysicalNumberOfRows():int ==> this will give you the count of rows in a sheet 
+
+
+ws.getRow(0).getLastCellNum(): int ==> this will return the last index of cell (here cell index starts from 1)
+
+ws.getRow(0).getPhysicalNumberOfCells():int ==> this will give you the count of cells in that row 
+
+
+cell.getStringCellValue()
+
+cell.getNumericCellValue()
+
+cell.getBooleanCellValue()
+
+ 
+--------------------------
+Writing to Excel 
+
+case 1 : Modifying an existing cell 
+
+ws.getRow(row index).getCell(cell index).setCellValue("New FLM");
+
+case 2: creating a new cell in existing row 
+
+ws.getRow(row index).createCell(cell index).setCellValue("Pass");
+
+case 3: Creating a new Row and cell in it
+
+===========================
+Properties File 
+
+It's a flat file which stores data in form of key value 
+
+		FileInputStream fis=new FileInputStream("Properties\\config.properties");
+		
+		Properties pr=new Properties();
+		
+		pr.load(fis);
+		
+methods :
+
+pr.getProperty(String):String 
+
+parameter is Key 
+return String is value 
+
+?????????????????????????????????????/
+Assignment 
+
+
+use properties file and here you should launch the browser as per 
+key value 
+
+Acceptance Criteria :
+
+browser=chrome
+url=https://adactinhotelapp.com/
+
+here chrome browser should start and launch the url 
+
+
+browser=firefox
+url=https://adactinhotelapp.com/
+
+here firefox browser should start and launch the url 
+????????????????????????????????????????????????????	
+
+**************************************************
+***** JAVA Season - 3 ****************************
+===   27th Oct Friday  ==========================
+**************************************************
+
+
+java.util
+
+
+
+HashMap : 
+
+
+Map<K,V> (I) : 
+  Entry<K, V>
+============================
+Methods in Map : 
+
+put(K, V):V 
+
+size() : int ==> no of entries in Map 
+
+containsKey(Object):boolean
+containsValue(Object):boolean 
+isEmpty():boolean 
+
+keySet():Set<K>
+values():Collection<V> 
+entrySet():Set<Entry<K,V>>
+========================================
+
+Methods In Entry (I):
+
+getKey():K 
+getValue():V 
+setValue(V):V
+
+=========================================
+
+HashMap(C):
+
+
+HashMap()  : map with initial capacity 16 
+HashMap(int)
+HashMap(int, float) 
+HashMap(Map<? extends K, ? extends V>)
+
+
+=================================
+JSON file 
+
+JavaScript Object Notation
+
+- Data Representation Format
+- commonly used for API's and configs 
+- Lightweight and Easy to read/write 
+- Integrates Easily with most of languages
+
+JSON Types :
+
+- String   "Hello World"  "I" 
+
+-Numbers 10 1.5 -25 
+
+-Booleans true false
+
+-null null
+
+-Arrays [1,2,4]  ["Hello", "hi" , "World"]
+
+-Objects {"key":"value"}  {"age":"40"}
+
+
+
+
+
+
+
+
+							
+
