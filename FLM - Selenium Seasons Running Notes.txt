@@ -1250,6 +1250,102 @@ JSON Types :
 -Objects {"key":"value"}  {"age":"40"}
 
 
+**************************************************
+***** JAVA Season - 3 ****************************
+===   28th Oct Saturday  ==========================
+**************************************************
+
+
+JSONParser(C):
+
+JSONParser()
+
+Methods in JSONParser :
+
+parse(Reader):here Reader means object of FileReader 
+
+
+
+
+************************************************************
+******** Selenium Season - 3 *******************************
+======== 30th October Monday ===============================
+************************************************************
+
+Structure of Project : 
+
+
+src/main/java
+
+src/main/resources
+
+src/test/java
+		|
+		base
+		|
+		utils
+		|
+		testscripts
+				|
+				regression
+				|
+				smoke
+				|
+				sanity
+				
+src/test/resources
+		|
+		testdata
+			|
+			excels
+				|
+				regression
+				|
+				smoke
+				|
+				sanity
+			|
+			jsons
+			|
+			csvfiles
+			
+		|
+		properties 
+			|
+			config.properties
+			|
+			locators.properties 
+			
+			
+
+==============================================
+Data Parametization in TestNG 
+
+using @DataProvider 
+
+
+
+@DataProvider
+	public Object[][] getData()
+	{
+		
+		
+		return null;
+		
+	}
+	
+	
+	
+reyaz009 	reyaz123 	Adactin.com - Search Hotel
+reyaz009 	reyaz456 	Adactin.com - Hotel Reservation System
+reyaz1245 	reyaz123 	Adactin.com - Hotel Reservation System
+reyaz1245 	reyaz456 	Adactin.com - Hotel Reservation System
+
+
+
+
+
+
 
 
 
