@@ -22,7 +22,10 @@ public class BaseTest {
 	public WebDriver driver;
 	
 	public FileInputStream fis1;
-	public Properties configProperties;
+	public static Properties configProperties;
+	
+	public FileInputStream fis2;
+	public static Properties locatorsProperties;
 	
 	// to read properties files 
 	
@@ -34,9 +37,13 @@ public class BaseTest {
 		 configProperties=new Properties();
 		configProperties.load(fis1);
 		
+		 fis2=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\locators.properties");
+		 locatorsProperties=new Properties();
+		 locatorsProperties.load(fis2);
+		
 	}
 	
-	@BeforeMethod
+	//@BeforeMethod
 	public void setUp()
 	{
 		System.out.println("In Before Method ...");
@@ -70,7 +77,7 @@ public class BaseTest {
 		
 	}
 	
-	@AfterMethod
+	//@AfterMethod
 	public void teardown()
 	{
 		System.out.println("In After Method ...");

@@ -2,35 +2,27 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-31T19:46:59 IST" name="Default suite" finished-at="2023-10-31T19:47:10 IST" duration-ms="11101">
+  <suite started-at="2023-11-01T20:06:16 IST" name="Default suite" finished-at="2023-11-01T20:06:27 IST" duration-ms="11205">
     <groups>
     </groups>
-    <test started-at="2023-10-31T19:46:59 IST" name="Default test" finished-at="2023-10-31T19:47:10 IST" duration-ms="11101">
-      <class name="testscripts.regression.ValidateLoginDataProviderExcel">
-        <test-method is-config="true" signature="filesRead()[pri:0, instance:testscripts.regression.ValidateLoginDataProviderExcel@4686afc2]" started-at="2023-10-31T19:46:59 IST" name="filesRead" finished-at="2023-10-31T19:46:59 IST" duration-ms="9" status="PASS">
+    <test started-at="2023-11-01T20:06:16 IST" name="Default test" finished-at="2023-11-01T20:06:27 IST" duration-ms="11205">
+      <class name="testscripts.regression.ValidateRegistration">
+        <test-method is-config="true" signature="filesRead()[pri:0, instance:testscripts.regression.ValidateRegistration@5677323c]" started-at="2023-11-01T20:06:16 IST" name="filesRead" finished-at="2023-11-01T20:06:16 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filesRead -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testscripts.regression.ValidateLoginDataProviderExcel@4686afc2]" started-at="2023-10-31T19:47:00 IST" name="setUp" finished-at="2023-10-31T19:47:06 IST" duration-ms="5777" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="validateLoginTest(java.util.HashMap)[pri:0, instance:testscripts.regression.ValidateLoginDataProviderExcel@4686afc2]" started-at="2023-10-31T19:47:06 IST" name="validateLoginTest" data-provider="getData" finished-at="2023-10-31T19:47:07 IST" duration-ms="870" status="PASS">
+        <test-method signature="validateRegistrationTest(java.util.HashMap)[pri:0, instance:testscripts.regression.ValidateRegistration@5677323c]" started-at="2023-11-01T20:06:17 IST" name="validateRegistrationTest" data-provider="getData" finished-at="2023-11-01T20:06:27 IST" duration-ms="10068" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Expected Title=Adactin.com - Search Hotel, password=reyaz123, username=reyaz009}]]>
+                <![CDATA[{Expected Title=Adactin.com - New User Registration, Username=Ravi0111, Captcha Text=marbly, Confirm Password=Ravi123, Full Name=Ravi Kumar, Password=Ravi123, Email Address=ravi12@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testscripts.regression.ValidateLoginDataProviderExcel@4686afc2]" started-at="2023-10-31T19:47:07 IST" name="teardown" finished-at="2023-10-31T19:47:10 IST" duration-ms="3295" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- testscripts.regression.ValidateLoginDataProviderExcel -->
+        </test-method> <!-- validateRegistrationTest -->
+      </class> <!-- testscripts.regression.ValidateRegistration -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
