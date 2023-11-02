@@ -19,7 +19,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	
 	public FileInputStream fis1;
 	public static Properties configProperties;
@@ -43,7 +43,7 @@ public class BaseTest {
 		
 	}
 	
-	//@BeforeMethod
+	@BeforeMethod
 	public void setUp()
 	{
 		System.out.println("In Before Method ...");
@@ -77,7 +77,7 @@ public class BaseTest {
 		
 	}
 	
-	//@AfterMethod
+	@AfterMethod
 	public void teardown()
 	{
 		System.out.println("In After Method ...");

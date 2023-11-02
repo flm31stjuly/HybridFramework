@@ -1344,10 +1344,49 @@ reyaz1245 	reyaz456 	Adactin.com - Hotel Reservation System
 
 
 
+************************************************************
+******** Selenium Season - 3 *******************************
+======== 1st November Wednesday ============================
+************************************************************
+
+Keyword Driven Framework :
 
 
+Here Keyword means a method or function defined for a particular step in Test Case 
+
+GenericKeywords
+
+ValidationKeywords
+
+ApplicationKeywords
+
+************************************************************
+******** Selenium Season - 3 *******************************
+======== 2nd  November Thursday ============================
+************************************************************
+
+ POM (Page Object Model) 
+ 
+ POM is not a Framework
+ 
+ this is a design appplied for framework 
+
+Page Object Model is also called Object Repository Model .
+
+Here Page means a class consists of 
+
+Objects (WebElement's in Page /screen)
+
+Actions (methods that can be applied )
+
+------------------------------------------------
+POM using PageFactory 
 
 
+using annotation 
+
+@FindBy(someLocator="value")
+WebElement elementName;
 
 
 

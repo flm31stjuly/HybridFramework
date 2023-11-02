@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testscripts.regression.ValidateLoginUsingKeywords">
+      <class name="testscripts.regression.ValidateLoginUsingPOM">
         <methods>
-          <include name="filesRead"/>
+          <include name="setUp"/>
           <include name="validateLoginTest"/>
+          <include name="filesRead"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- testscripts.regression.ValidateLoginUsingKeywords -->
+      </class> <!-- testscripts.regression.ValidateLoginUsingPOM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

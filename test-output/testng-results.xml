@@ -2,27 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-01T20:06:16 IST" name="Default suite" finished-at="2023-11-01T20:06:27 IST" duration-ms="11205">
+  <suite started-at="2023-11-02T20:06:37 IST" name="Default suite" finished-at="2023-11-02T20:06:53 IST" duration-ms="16345">
     <groups>
     </groups>
-    <test started-at="2023-11-01T20:06:16 IST" name="Default test" finished-at="2023-11-01T20:06:27 IST" duration-ms="11205">
-      <class name="testscripts.regression.ValidateRegistration">
-        <test-method is-config="true" signature="filesRead()[pri:0, instance:testscripts.regression.ValidateRegistration@5677323c]" started-at="2023-11-01T20:06:16 IST" name="filesRead" finished-at="2023-11-01T20:06:16 IST" duration-ms="10" status="PASS">
+    <test started-at="2023-11-02T20:06:37 IST" name="Default test" finished-at="2023-11-02T20:06:53 IST" duration-ms="16345">
+      <class name="testscripts.regression.ValidateLoginUsingPOM2">
+        <test-method is-config="true" signature="filesRead()[pri:0, instance:testscripts.regression.ValidateLoginUsingPOM2@45099dd3]" started-at="2023-11-02T20:06:37 IST" name="filesRead" finished-at="2023-11-02T20:06:37 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filesRead -->
-        <test-method signature="validateRegistrationTest(java.util.HashMap)[pri:0, instance:testscripts.regression.ValidateRegistration@5677323c]" started-at="2023-11-01T20:06:17 IST" name="validateRegistrationTest" data-provider="getData" finished-at="2023-11-01T20:06:27 IST" duration-ms="10068" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testscripts.regression.ValidateLoginUsingPOM2@45099dd3]" started-at="2023-11-02T20:06:38 IST" name="setUp" finished-at="2023-11-02T20:06:45 IST" duration-ms="6635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateLoginTest(java.util.HashMap)[pri:0, instance:testscripts.regression.ValidateLoginUsingPOM2@45099dd3]" started-at="2023-11-02T20:06:45 IST" name="validateLoginTest" data-provider="getData" finished-at="2023-11-02T20:06:50 IST" duration-ms="4701" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Expected Title=Adactin.com - New User Registration, Username=Ravi0111, Captcha Text=marbly, Confirm Password=Ravi123, Full Name=Ravi Kumar, Password=Ravi123, Email Address=ravi12@gmail.com}]]>
+                <![CDATA[{Expected Title=Adactin.com - Search Hotel, password=reyaz123, username=reyaz009}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateRegistrationTest -->
-      </class> <!-- testscripts.regression.ValidateRegistration -->
+        </test-method> <!-- validateLoginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testscripts.regression.ValidateLoginUsingPOM2@45099dd3]" started-at="2023-11-02T20:06:50 IST" name="teardown" finished-at="2023-11-02T20:06:53 IST" duration-ms="3447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testscripts.regression.ValidateLoginUsingPOM2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

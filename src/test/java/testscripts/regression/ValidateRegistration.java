@@ -2,6 +2,7 @@ package testscripts.regression;
 
 import java.util.HashMap;
 
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -24,6 +25,7 @@ public class ValidateRegistration extends BaseTest {
 		
 		app.validateTitle(dataMap.get("Expected Title"));
 		
+		//Assert.assertTrue(false);		
 		/*
 		 * register_username_textbox=//input[@name='username']
 register_password_textbox=//input[@name='password']

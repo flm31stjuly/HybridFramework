@@ -53,6 +53,12 @@
     <version>20231013</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-excelant -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-excelant</artifactId>
+    <version>5.2.4</version>
+</dependency>
 
   
   </dependencies>
