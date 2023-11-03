@@ -10,11 +10,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import extentreports.ExtentManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
@@ -27,7 +32,20 @@ public class BaseTest {
 	public FileInputStream fis2;
 	public static Properties locatorsProperties;
 	
+	public static ExtentReports reports;
+	
+	public static ExtentTest test;
+	
 	// to read properties files 
+	
+	@AfterTest
+	public void closeReports()
+	{
+		if(reports!=null)
+		{
+			reports.flush();
+		}
+	}
 	
 	@BeforeTest
 	public void filesRead() throws IOException
@@ -40,12 +58,25 @@ public class BaseTest {
 		 fis2=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\locators.properties");
 		 locatorsProperties=new Properties();
 		 locatorsProperties.load(fis2);
+		 
+		 reports=ExtentManager.getReports();
 		
 	}
 	
 	@BeforeMethod
-	public void setUp()
+	public void setUp(ITestContext context)
 	{
+		
+		//test=reports.createTest("Adactin Login Test");
+		
+		//test=reports.createTest(context.getCurrentXmlTest().getName());
+		
+		test=reports.createTest(context.getCurrentXmlTest().getName());
+		
+		context.setAttribute("report", "reports");
+		
+		context.setAttribute("test", "test");
+		
 		System.out.println("In Before Method ...");
 		String browserName=configProperties.getProperty("browser");
 		

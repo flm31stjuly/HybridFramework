@@ -12,5 +12,7 @@ public class SearchHotelPage extends BasePage{
 	WebElement resetButton;
 	
 	
+	
+	
 
 }

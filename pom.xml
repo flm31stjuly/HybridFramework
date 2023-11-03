@@ -53,11 +53,12 @@
     <version>20231013</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-excelant -->
+
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 <dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-excelant</artifactId>
-    <version>5.2.4</version>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.1</version>
 </dependency>
 
   

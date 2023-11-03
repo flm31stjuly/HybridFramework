@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="testscripts.regression.ValidateLoginUsingPOM">
+      <class name="testscripts.regression.ValidateRegistration">
         <methods>
           <include name="setUp"/>
-          <include name="validateLoginTest"/>
+          <include name="filesRead"/>
+          <include name="validateRegistrationTest"/>
+          <include name="teardown"/>
+          <include name="closeReports"/>
+        </methods>
+      </class> <!-- testscripts.regression.ValidateRegistration -->
+      <class name="testscripts.regression.ValidateLoginUsingHybrid">
+        <methods>
+          <include name="setUp"/>
           <include name="filesRead"/>
           <include name="teardown"/>
+          <include name="validateLoginTest"/>
+          <include name="closeReports"/>
         </methods>
-      </class> <!-- testscripts.regression.ValidateLoginUsingPOM -->
+      </class> <!-- testscripts.regression.ValidateLoginUsingHybrid -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

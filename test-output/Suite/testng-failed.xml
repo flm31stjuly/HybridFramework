@@ -5,14 +5,20 @@
     <classes>
       <class name="testscripts.regression.ValidateRegistration">
         <methods>
+          <include name="setUp"/>
           <include name="filesRead"/>
           <include name="validateRegistrationTest"/>
+          <include name="teardown"/>
+          <include name="closeReports"/>
         </methods>
       </class> <!-- testscripts.regression.ValidateRegistration -->
       <class name="testscripts.regression.ValidateLoginUsingHybrid">
         <methods>
+          <include name="setUp"/>
           <include name="filesRead"/>
+          <include name="teardown"/>
           <include name="validateLoginTest"/>
+          <include name="closeReports"/>
         </methods>
       </class> <!-- testscripts.regression.ValidateLoginUsingHybrid -->
     </classes>

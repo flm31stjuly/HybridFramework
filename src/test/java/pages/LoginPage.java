@@ -16,6 +16,9 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath="//input[@name='login']")
 	WebElement loginButton;
 	
+	@FindBy(xpath = "//a[text()='New User Register Here']")
+	WebElement registrationLink;
+	
 	public void usernameTextbox(String text)
 	{
 		usernameTextbox.sendKeys(text);
@@ -31,4 +34,8 @@ public class LoginPage extends BasePage {
 		loginButton.click();
 	}
 
+	public void registrationLink()
+	{
+		registrationLink.click();
+	}
 }

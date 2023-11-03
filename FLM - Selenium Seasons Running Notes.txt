@@ -1389,6 +1389,32 @@ using annotation
 WebElement elementName;
 
 
+************************************************************
+******** Selenium Season - 3 *******************************
+======== 3rd November Friday    ============================
+************************************************************
+
+Report generation in Project :
+
+Extent Reports or Allure Reports 
+
+use are using Extent Reports(5.1.1)  in our project 
+
+com.aventstack » extentreports
+
+3 classes :
+
+
+ExtentReports  (com.aventstack.extentreports)
+
+ExtentTest (com.aventstack.extentreports)
+
+ExtentSparkReporter (com.aventstack.extentreports.reporter)
+
+
+
+
+
 
 
 							
