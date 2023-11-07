@@ -6,6 +6,7 @@ import java.util.Date;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import base.BaseTest;
 
@@ -40,6 +41,8 @@ public class ExtentManager extends BaseTest {
 			reporter.config().setDocumentTitle("Adactin QA Regression Results");
 			
 			reporter.config().setReportName("Regression Reports");
+			
+			reporter.config().setTheme(Theme.DARK);
 			
 			reports.attachReporter(reporter);
 			

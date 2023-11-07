@@ -22,20 +22,24 @@ public class LoginPage extends BasePage {
 	public void usernameTextbox(String text)
 	{
 		usernameTextbox.sendKeys(text);
+		test.info("entered text "+text+" into textbox");
 	}
 	
 	public void passwordTextbox(String text)
 	{
 		passwordTextbox.sendKeys(text);
+		test.info("entered text "+text+" into textbox");
 	}
 	
 	public void loginButton()
 	{
 		loginButton.click();
+		test.info("Clicked login button ");
 	}
 
 	public void registrationLink()
 	{
 		registrationLink.click();
+		test.info("Clicked registration button ");
 	}
 }

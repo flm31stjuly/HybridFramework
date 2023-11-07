@@ -1412,10 +1412,80 @@ ExtentTest (com.aventstack.extentreports)
 ExtentSparkReporter (com.aventstack.extentreports.reporter)
 
 
+************************************************************
+******** Selenium Season - 3 *******************************
+======== 6th November Monday    ============================
+************************************************************
+
+Listeners in TestNG 
 
 
+here events are called Listeners
+
+iTestListener  (interface)
+
+------------------------------------------------------------
+Project 2
+
+using BDD Framework with Cucumber API 
 
 
+here BDD means Behaviour Driven Development 
 
+best suited for all Agile(Scrum Framwork) projects
+
+why BDD now-a-days ?
+
+- Good Collabaration (user stories will be in plain English)
+
+- Test Cases or Scenarios (will be written plain egnlish using gherkin lang)
+
+
+new dependencies :
+
+-> cucumber-java
+-> cucumber-junit or cucumber-testng 
+
+-----------------------------------------------
+Add Cucumber plugin to your project 
+
+Cucumber Eclipse plugin from "Eclipse Market Place" 
+
+
+#Author: your.email@your.domain.com
+#Keywords Summary :
+#Feature: List of scenarios.
+#Scenario: Business rule through list of steps with arguments.
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
+#Examples: Container for s table
+#Background: List of steps run before each of the scenarios
+#""" (Doc Strings)
+#| (Data Tables)
+#@ (Tags/Labels):To group Scenarios
+#<> (placeholder)
+#""
+## (Comments)
+#Sample Feature Definition Template 
+
+
+------------------------------------------
+#Feature: List of scenarios.
+
+Feature is similar to a Module or Test Scenario
+
+#Scenario: Business rule through list of steps with arguments.
+
+Scenario is similar to Test case 
+
+below are kwyeord for steps :
+
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
 							
 

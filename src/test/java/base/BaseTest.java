@@ -88,11 +88,13 @@ public class BaseTest {
 		{
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver(options);
+			test.info("Chrome browser started...");
 		}
 		else if(browserName.equalsIgnoreCase("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
+			test.info("Firefox browser started...");
 		}
 		else if(browserName.equalsIgnoreCase("edge"))
 		{
@@ -101,6 +103,8 @@ public class BaseTest {
 		}
 		
 		driver.get(configProperties.getProperty("url"));
+		
+		test.info("App launched using url "+configProperties.getProperty("url"));
 		
 		driver.manage().window().maximize();
 		

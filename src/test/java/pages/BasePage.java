@@ -20,7 +20,7 @@ public class BasePage extends BaseTest {
 		Assert.assertEquals(driver.getTitle(), expTitle);
 	}
 	
-	public static void screenshot()
+	public static String  screenshot()
 	{
 		String screenshotsFolderPath=System.getProperty("user.dir")+"\\screenshots";
 		File screenshotsFolder=new File(screenshotsFolderPath);
@@ -34,14 +34,16 @@ public class BasePage extends BaseTest {
 		date=date.replace(":", "-");
 		System.out.println(date);
 		
+		String screenShotFileName=screenshotsFolderPath+"\\"+date+".png";
 	     File srcFile= ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	     
 	     try {
-			FileUtils.copyFile(srcFile, new File(screenshotsFolderPath+"\\"+date+".png"));
+			FileUtils.copyFile(srcFile, new File(screenShotFileName));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return screenShotFileName;
 		
 	}
 

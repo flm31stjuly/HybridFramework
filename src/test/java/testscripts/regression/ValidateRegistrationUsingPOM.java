@@ -3,6 +3,7 @@ package testscripts.regression;
 import java.util.HashMap;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -43,6 +44,7 @@ public class ValidateRegistrationUsingPOM extends BaseTest {
 		
 		registrationPage.termsAndConditionsCheckbox();
 		
+		Assert.assertTrue(false);
 		
 	}
 

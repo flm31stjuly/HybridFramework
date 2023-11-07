@@ -40,24 +40,31 @@ register_button=//input[@name='Submit']
 	
 	public void  usernameTextbox(String text) {
 		usernameTextbox.sendKeys(text);
+		test.info("entered text "+text+" into textbox");
 	}
 	public void  passwordTextbox(String text) {
 		passwordTextbox.sendKeys(text);
+		test.info("entered text "+text+" into textbox");
 	}
 	public void  confirmPasswordTextbox(String text) {
 		confirmPasswordTextbox.sendKeys(text);
+		test.info("entered text "+text+" into textbox");
 	}
 	public void  fullNameTextbox(String text) {
 		fullNameTextbox.sendKeys(text);
+		test.info("entered text "+text+" into textbox");
 	}
 	public void  emailTextbox(String text) {
 		emailTextbox.sendKeys(text);
+		test.info("entered text "+text+" into textbox");
 	}
 	public void  captchaTextbox(String text) {
 		captchaTextbox.sendKeys(text);
+		test.info("entered text "+text+" into textbox");
 	}
 	public void  termsAndConditionsCheckbox() {
 		termsAndConditionsCheckbox.click();
+		test.info("Clicked register button ");
 	}
 	
 	
