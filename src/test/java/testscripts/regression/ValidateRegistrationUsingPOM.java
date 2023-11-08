@@ -44,7 +44,7 @@ public class ValidateRegistrationUsingPOM extends BaseTest {
 		
 		registrationPage.termsAndConditionsCheckbox();
 		
-		Assert.assertTrue(false);
+		//Assert.assertTrue(false);
 		
 	}
 

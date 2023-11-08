@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-08T19:54:58 IST" name="Suite" finished-at="2023-11-08T19:55:33 IST" duration-ms="34881">
+    <groups>
+    </groups>
+    <test started-at="2023-11-08T19:54:58 IST" name="Test" finished-at="2023-11-08T19:55:33 IST" duration-ms="34881">
+      <class name="testscripts.regression.ValidateRegistrationUsingPOM">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:testscripts.regression.ValidateRegistrationUsingPOM@19932c16]" started-at="2023-11-08T19:55:20 IST" name="setUp" finished-at="2023-11-08T19:55:25 IST" duration-ms="4676" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@58182b96]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateRegistration(java.util.HashMap)[pri:0, instance:testscripts.regression.ValidateRegistrationUsingPOM@19932c16]" started-at="2023-11-08T19:55:25 IST" name="validateRegistration" data-provider="getData" finished-at="2023-11-08T19:55:29 IST" duration-ms="4146" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Expected Title=Adactin.com - New User Registration, Username=Ravi0111, Captcha Text=marbly, Confirm Password=Ravi123, Full Name=Ravi Kumar, Password=Ravi123, Email Address=ravi12@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateRegistration -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testscripts.regression.ValidateRegistrationUsingPOM@19932c16]" started-at="2023-11-08T19:55:29 IST" name="teardown" finished-at="2023-11-08T19:55:32 IST" duration-ms="3306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testscripts.regression.ValidateRegistrationUsingPOM -->
+      <class name="testscripts.regression.ValidateLoginUsingPOM2">
+        <test-method is-config="true" signature="filesRead()[pri:0, instance:testscripts.regression.ValidateLoginUsingPOM2@4082ba93]" started-at="2023-11-08T19:54:58 IST" name="filesRead" finished-at="2023-11-08T19:54:59 IST" duration-ms="625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filesRead -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:testscripts.regression.ValidateLoginUsingPOM2@4082ba93]" started-at="2023-11-08T19:55:01 IST" name="setUp" finished-at="2023-11-08T19:55:12 IST" duration-ms="11767" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@58182b96]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateLoginTest(java.util.HashMap)[pri:0, instance:testscripts.regression.ValidateLoginUsingPOM2@4082ba93]" started-at="2023-11-08T19:55:12 IST" name="validateLoginTest" data-provider="getData" finished-at="2023-11-08T19:55:17 IST" duration-ms="4185" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Expected Title=Adactin.com - Search Hotel, password=reyaz123, username=reyaz009}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testscripts.regression.ValidateLoginUsingPOM2@4082ba93]" started-at="2023-11-08T19:55:17 IST" name="teardown" finished-at="2023-11-08T19:55:20 IST" duration-ms="3320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="closeReports()[pri:0, instance:testscripts.regression.ValidateLoginUsingPOM2@4082ba93]" started-at="2023-11-08T19:55:32 IST" name="closeReports" finished-at="2023-11-08T19:55:33 IST" duration-ms="723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReports -->
+      </class> <!-- testscripts.regression.ValidateLoginUsingPOM2 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

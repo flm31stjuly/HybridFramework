@@ -1489,3 +1489,173 @@ below are kwyeord for steps :
 #And,But: To enumerate more Given,When,Then steps
 							
 
+
+************* Selenium Season - 3 ***********************************
+*********************************************************************
+===============  7th November Tuesday    =============================
+*********************************************************************
+
+Listeners in TestNG :
+
+Listeners are nothing but events used by TestNG 
+
+iTestListener (I) in TestNG : 
+
+Project 1 : using
+
+Hybrid Framework ( Data Driven + Keyword Driven + unit testing framework as TestNg + POM design pattern)
+
+
+-------------------------------------------------------------------------------
+
+Project 2:
+
+BDD using Cucumber API 
+
+BDD Framework : BDD stands for Behaviour Driven Developement
+
+suited for Agile (Scrum Framework) projects
+
+we need to 2 new dependencies :
+
+cucumber-java 
+
+cucumber-junit or cucumber-testNg 
+
+
+Here ,
+
+TestScripts will be writen in feature files(files having extension .feature) 
+
+Here Feature means/ similar to Test Scenario
+
+Feature is a collection of Screnarios 
+
+Here Scenario means / similar to Test Case 
+
+
+
+-----------------------------------
+Add below plugin
+
+Cucumber Eclipse plugin from "Eclipse Market place"
+
+-------------------------------------------
+We will write Feature feature using Gherkin Language 
+
+#Author: your.email@your.domain.com
+#Keywords Summary :
+#Feature: List of scenarios.
+#Scenario: Business rule through list of steps with arguments.
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
+#Examples: Container for s table
+#Background: List of steps run before each of the scenarios
+#""" (Doc Strings)
+#| (Data Tables)
+#@ (Tags/Labels):To group Scenarios
+#<> (placeholder)
+#""
+## (Comments)
+#Sample Feature Definition Template
+
+-------------------------------------------------------
+Feature:  means a Test Scenario
+
+Scenario:  means a Test Case 
+
+Given used for steps under Sceanario  ( to write some preconditions) 
+
+When used for any action on Web page 
+
+Then for validation 
+
+
+
+
+
+
+
+
+
+
+io.cucumber.junit.UndefinedStepException: The step 'user verify the presence of text using xpath "//div[@class='auth_error']/b"' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("user verify the presence of text using xpath {string}")
+public void user_verify_the_presence_of_text_using_xpath(String string, io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Hooks in Cucumber :
+
+
+@Before 
+
+this annotated method will be executed before each Scenario in Feature 
+
+@After 
+
+this annotated method will be executed after each Scenario in Feature 
+
+
+****************************
+Imp question 
+*****************************
+
+How do you achieve paramterization in BDD / Cucumber 
+
+Ans :
+
+using Scenario Outline and Examples
+
+*************************************************
+
+Background: List of steps run before each of the scenarios
+
+?????????????????????????????????????????????
+
+Assignment 
+
+Write two Scenario's for Registration Functionality 
+
+1) using each step for entering data (i.e harding coding )
+2) using only one step using datatable concept 
+
+
+----------------------------------------------------------------------------
+
+Git and Github /Gitlab /bitbucket 
+
+how to download git ?
+
+git is a Source Control Management tool (SCM tools ) 
+
+
+https://git-scm.com/downloads
+under Standalone Installer :
+click below link 
+64-bit Git for Windows Setup.
+
+--------------------------------------------------
+how to create git hub account 
+
+go to https://github.com/
+
+click on "Sign up"
+
+Enter your email* and click continue
+
+
+
